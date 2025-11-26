@@ -1,5 +1,17 @@
 {
   "plugins": {
+    "barbar.nvim": {
+      "rev": "fb4369940a07dda35fa4d7f54cf4a36aa00440e6",
+      "src": "https://github.com/romgrk/barbar.nvim.git"
+    },
+    "gitsigns.nvim": {
+      "rev": "cdafc320f03f2572c40ab93a4eecb733d4016d07",
+      "src": "https://github.com/lewis6991/gitsigns.nvim.git"
+    },
+    "lualine.nvim": {
+      "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
+      "src": "https://github.com/nvim-lualine/lualine.nvim.git"
+    },
     "nvim-tree.lua": {
       "rev": "3fb91e18a727ecc0385637895ec397dea90be42a",
       "src": "https://github.com/nvim-tree/nvim-tree.lua.git"
@@ -11,6 +23,14 @@
     "plenary.nvim": {
       "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
       "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "telescope.nvim": {
+      "rev": "1f8a534a320dca8d73f6de58c2e8eea4dd4ced89",
+      "src": "https://github.com/nvim-telescope/telescope.nvim.git"
+    },
+    "vim-fugitive": {
+      "rev": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4",
+      "src": "https://github.com/tpope/vim-fugitive.git"
     }
   }
 }
