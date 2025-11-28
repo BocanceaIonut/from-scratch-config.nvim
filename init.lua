@@ -1,22 +1,45 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+local keymap = vim.keymap
+
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
 
 vim.o.number = true
+
 -- sync clipboard with nvim
 vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
 
 -- keymaps
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('n', '<leader>nn', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle NvimTree' })
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'exit terminal mode' })
-vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'quit shortcut' })
+keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+-- keymaps NvimTree
+keymap.set('n', '<leader>nn', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle NvimTree' })
+keymap.set('n', '<leader>nf', '<cmd>NvimTreeFindFile<CR>', { desc = 'Find file NvimTree' })
+--
+
+-- terminal
+keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'exit terminal mode' })
+--
+
+-- buffers
+keymap.set('n', '<leader>,', '<cmd>b#<CR>', { desc = 'switch buffers' })
+--
+
+-- telescope
+keymap.set('n', '<leader>t', '<cmd>Telescope find_files<CR>', { desc = 'Telescope find files' })
+keymap.set('n', '<leader>b', '<cmd>Telescope buffers<CR>', { desc = 'Telescope find buffers' })
+--
+
+keymap.set('n', '<leader>s', '<cmd>w<CR>', { desc = 'save current file' })
+keymap.set('n', '<leader>sa', '<cmd>wa<CR>', { desc = 'save all files' })
+
+keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'quit shortcut' })
+
+keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 ---------
 
 -- lsp
@@ -39,7 +62,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 --     }
 --   }
 -- }
---
+
 -- vim.lsp.enable('lua_ls')
 ----
 
